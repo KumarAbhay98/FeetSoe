@@ -21,7 +21,6 @@ const requireAuth = (req, res, next) => {
   }
 };
 
-
 // check current user(this middleware is to check if the user is login then there will be a jwt token and this token is decoded by this middleware to get the data of the user in order to do conditional rendering)
 // check current user
 const checkUser = (req, res, next) => {

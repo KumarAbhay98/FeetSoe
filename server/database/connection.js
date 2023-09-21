@@ -1,8 +1,5 @@
 const mongoose = require('mongoose')
-
-
 const connectDB = async () => {
-
     try {
         //will connect with databse using our connection string here from env file
         //process.env.variablename in order to use the config.env data
@@ -22,5 +19,4 @@ const connectDB = async () => {
         process.exit(1)
     }
 }
-
 module.exports = connectDB

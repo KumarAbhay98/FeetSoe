@@ -12,7 +12,6 @@
 
 <div class="container">
     <h1 class="my-4 text-center"><span style="color:orange">Fashion</span></h1>
-
     <!-- Category buttons -->
     <div class="btn-group justify-content-center">
         <button type="button" class="btn fashion-category-btn" data-category="All">All items</button>
@@ -20,7 +19,6 @@
         <button type="button" class="btn fashion-category-btn" data-category="Women's Wear">Women's Wear</button>
         <button type="button" class="btn fashion-category-btn" data-category="Kid's Wear">Kid's Wear</button>
     </div>
-
     <div class="row" id="shoes-container">
         <!-- Loop through shoe data and display cards -->
         <% for (let i = 0; i < shoes.length; i++) { %>
@@ -38,9 +36,6 @@
                         <p class="card-text"><strong>Price:</strong>
                             <%= shoes[i].price %>
                         </p>
-                        <!-- <p class="card-text"><strong>Description</strong>
-                            <%= shoes[i].description %>
-                        </p> -->
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <a href="/viewProduct/<%= shoes[i].slug %>">
@@ -85,20 +80,16 @@
                 }
             });
         }
-
         // Initialize pagination with the first page
         renderCurrentPage();
-
         // Function to generate pagination controls dynamically
         function generatePaginationControls() {
             const filteredShoes = Array.from(allShoes).filter(shoe => {
                 const category = shoe.getAttribute('data-category');
                 return currentCategory === 'All' || category === currentCategory;
             });
-
             const totalPages = Math.ceil(filteredShoes.length / itemsPerPage);
             paginationContainer.innerHTML = '';
-
             // Previous button
             const previousButton = document.createElement('li');
             previousButton.className = 'page-item disabled';
@@ -127,7 +118,6 @@
                 });
                 paginationContainer.appendChild(pageItem);
             }
-
             // Next button
             const nextButton = document.createElement('li');
             nextButton.className = 'page-item';
@@ -141,7 +131,6 @@
             });
             paginationContainer.appendChild(nextButton);
         }
-
         // Add click event listeners to the category buttons
         categoryButtons.forEach(button => {
             button.addEventListener('click', () => {
@@ -157,5 +146,4 @@
         generatePaginationControls();
     });
 </script>
-
 <%- include('include/_footer') %>

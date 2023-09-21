@@ -33,7 +33,6 @@ userSchema.pre('save', async function (next) {
 });
 
 
-
 //we gonna be creating a static model to perform our login operations 
 userSchema.statics.login = async function(email, password) {
     //we are finding an user with the same email

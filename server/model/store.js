@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 const storeSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -27,7 +26,5 @@ const storeSchema = new mongoose.Schema({
   },
   // You can add more fields as needed
 });
-
 const Store = mongoose.model('Store', storeSchema);
-
 module.exports = Store;

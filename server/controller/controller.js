@@ -1,5 +1,4 @@
 const Shoe = require('../model/model');
-
 // Create and save a new shoe product
 exports.create = (req, res) => {
     // Validate the request body

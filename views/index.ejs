@@ -1,361 +1,334 @@
-<!-- include header -->
 <%-include('include/_header')%>
-<!-- include header end  -->
 
-<!-- main -->
-<section id="main">
-    <!-- Cover Section -->
-    <section class="cover-section vh-100">
-        
-        <div class="container">
-            <div class="row">
-                <div class="home-hero-content col-md-6 offset-md-3 mt-5 ">
-                    <h1 class="jumbotron-heading">Welcome To <span
-                            style="color:rgb(154, 88, 23);font-size: 3rem;">F</span>eet<span
-                            style="color:rgba(0, 0, 0, 0.699);font-size: 3rem;">S</span>oe</h1>
-                    <p class="lead">Something short and leading about the
-                        collection below—its contents, the
-                        creator, etc. Make it short and sweet, but not too short
-                        so
-                        folks don’t simply skip over it
-                        entirely.</p>
-                    <p>
-                        <a href="/blogs" class="btn my-2"
-                            style="background-color:rgba(0, 0, 0, 0.725);color:rgb(176, 97, 17)">Main
-                            Our Blogs</a>
-                        <a href="/fashion" class="btn btn-secondary my-2"
-                            style="background-color:rgb(176, 97, 17);color:rgba(0, 0, 0, 0.725)">Our Products</a>
-                    </p>
+    <!-- main -->
+    <section id="main">
+        <section class="cover-section vh-100">
+            <div class="container">
+                <div class="row">
+                    <div class="home-hero-content col-md-6 offset-md-3 mt-5 ">
+                        <h1 class="jumbotron-heading">Welcome To <span
+                                style="color:rgb(154, 88, 23);font-size: 3rem;">F</span>eet<span
+                                style="color:rgba(0, 0, 0, 0.699);font-size: 3rem;">S</span>oe</h1>
+                        <p class="lead">Something short and leading about the
+                            collection below—its contents, the
+                            creator, etc. Make it short and sweet, but not too short
+                            so
+                            folks don’t simply skip over it
+                            entirely.</p>
+                        <p>
+                            <a href="/blogs" class="btn my-2"
+                                style="background-color:rgba(0, 0, 0, 0.725);color:rgb(176, 97, 17)">Main
+                                Our Blogs</a>
+                            <a href="/fashion" class="btn btn-secondary my-2"
+                                style="background-color:rgb(176, 97, 17);color:rgba(0, 0, 0, 0.725)">Our Products</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- "Go Up" button -->
+        <div id="go-up-button" class="btn btn-dark" style="background-color: orange; display: none;">
+            <i class="fa fa-arrow-up" style="margin-right:1rem"></i>
+        </div>
+        <!-- Loader -->
+        <div class="loader">
+            <div class="spinner"></div>
+            <div class="loader-text">FeetSoe...</div>
+        </div>
+        <main role="main">
+            <section>
+                <div class="container mt-1">
+                    <div class="row logo-container">
+                        <div class="col-lg-3 col-md-3">
+                            <img data-aos="fade-in"
+                                src="https://th.bing.com/th/id/OIP.H8dUp8Nse4sMva8xl1E0OgHaFJ?pid=ImgDet&rs=1"
+                                alt="Nike" class="img-fluid logo">
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                            <img data-aos="fade-in"
+                                src="https://th.bing.com/th/id/OIP.JbagTlZrLUw-lZdDboHn9wHaFj?pid=ImgDet&rs=1"
+                                alt="Nike" class="img-fluid logo">
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                            <img data-aos="fade-in" src="https://pngimg.com/uploads/nike/nike_PNG5.png" alt="Nike"
+                                class="img-fluid logo">
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                            <img data-aos="fade-in"
+                                src="https://www.freepngimg.com/thumb/logo/76330-logo-vans-shoe-adidas-free-download-png-hq.png"
+                                alt="Vans" class="img-fluid logo">
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                            <img data-aos="fade-in"
+                                src="https://pluspng.com/img-png/athletic-brands-png-puma-se-officially-branded-as-puma-is-a-major-german-multinational-company-that-produces-athletic-shoes-footwear-and-other-sportswear-1600.png"
+                                alt="Puma" class="img-fluid logo">
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- for including the cards -->
+            <%-include('include/_cards')%>
+        </main>
+    </section>
+
+    <!-- Service 5 - Bootstrap Brain Component -->
+    <section id="feature" class="bg-light py-3 py-md-5 py-xl-8">
+        <div class="container service-sector">
+            <div class="row gy-4 align-items-center">
+                <div class="col-12 col-lg-5">
+                    <div class="text-center text-lg-start">
+                        <h3 class="fs-4 fs-lg-6  mb-3 mt-sm-5 mb-xl-4 text-uppercase" style="color:rgb(207, 194, 194)">
+                            Discover the Perfect Fit</h3>
+                        <h2 class="display-5 mb-3 mb-xl-4" style="color:rgb(207, 194, 194)">We Craft Every Step to
+                            Elevate Your Style</h2>
+                        <p class="mb-3 mb-xl-4" style="color:rgb(207, 194, 194)">At our shoemaking atelier, we blend
+                            craftsmanship with innovation to offer you a curated selection of footwear that not only
+                            fits perfectly but also enhances your unique style. From timeless classics to the latest
+                            trends, we're dedicated to delivering shoes that make a statement.</p>
+                        <a data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in" href="/fashion"
+                            class="btn btn-primary rounded-pill">Explore Our Collection</a>
+                    </div>
+                    <hr>
+                </div>
+                <div class="col-12 col-lg-7">
+                    <div class="row gy-4 gx-3">
+                        <div data-aos="fade-down-right" class="col-12 col-sm-6 card-service">
+                            <div class="card border-0 shadow-lg glass-effect">
+                                <div class="card-body text-center p-4 p-xxl-5">
+                                    <i class="fa fa-line-chart"></i> <!-- Icon for trend -->
+                                    <h4 class="mb-4">Quality First</h4>
+                                    <p class="mb-4 text-dark">We're obsessed with quality. Each shoe is meticulously
+                                        crafted using the finest materials, ensuring durability and comfort. Walk
+                                        confidently with our premium footwear.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-down-left" class="col-12 col-sm-6 card-service">
+                            <div class="card border-0 shadow-lg glass-effect">
+                                <div class="card-body text-center p-4 p-xxl-5">
+                                    <i class="fa fa-shopping-bag"></i> <!-- Icon for fashion -->
+
+                                    <h4 class="mb-4">Fashion Forward</h4>
+                                    <p class="mb-4 text-dark">Stay ahead in style with our trendsetting footwear. Our
+                                        design team ensures that you're always on the cutting edge of fashion, making a
+                                        statement wherever you go.Just smile.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- goup btn -->
-    <!-- "Go Up" button -->
-    <div id="go-up-button" class="btn btn-dark" style="background-color: orange; display: none;">
-        <i class="fa fa-arrow-up" style="margin-right:1rem"></i>
-    </div>
-
-
-      <!-- Loader -->
-      <div class="loader">
-        <div class="spinner"></div>
-        <div class="loader-text">FeetSoe...</div>
-    </div>
-    <main role="main">
-        <section>
-            <div class="container mt-1">
-                <div class="row logo-container">
-                    <div class="col-lg-3 col-md-3">
-                        <img data-aos="fade-in"
-                            src="https://th.bing.com/th/id/OIP.H8dUp8Nse4sMva8xl1E0OgHaFJ?pid=ImgDet&rs=1"
-                            alt="Nike" class="img-fluid logo">
-                    </div>
-                    <div class="col-lg-3 col-md-3">
-                        <img data-aos="fade-in"
-                            src="https://th.bing.com/th/id/OIP.JbagTlZrLUw-lZdDboHn9wHaFj?pid=ImgDet&rs=1"
-                            alt="Nike" class="img-fluid logo">
-                    </div>
-                    <div class="col-lg-3 col-md-3">
-                        <img data-aos="fade-in"
-                            src="https://pngimg.com/uploads/nike/nike_PNG5.png"
-                            alt="Nike"
-                            class="img-fluid logo">
-                    </div>
-                    <div class="col-lg-3 col-md-3">
-                        <img data-aos="fade-in"
-                            src="https://www.freepngimg.com/thumb/logo/76330-logo-vans-shoe-adidas-free-download-png-hq.png"
-                            alt="Vans" class="img-fluid logo">
-                    </div>
-                    <div class="col-lg-3 col-md-3">
-                        <img data-aos="fade-in"
-                            src="https://pluspng.com/img-png/athletic-brands-png-puma-se-officially-branded-as-puma-is-a-major-german-multinational-company-that-produces-athletic-shoes-footwear-and-other-sportswear-1600.png"
-                            alt="Puma" class="img-fluid logo">
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- for including the cards -->
-        <%-include('include/_cards')%>
-
-    </main>
-
-</section>
-
-<!-- feature-section -->
-<!-- Service 5 - Bootstrap Brain Component -->
-<section id="feature" class="bg-light py-3 py-md-5 py-xl-8">
-    <div class="container service-sector">
-        <div class="row gy-4 align-items-center">
-            <div class="col-12 col-lg-5">
-                <div class="text-center text-lg-start">
-                    <h3 class="fs-4 fs-lg-6  mb-3 mt-sm-5 mb-xl-4 text-uppercase" style="color:rgb(207, 194, 194)">Discover the Perfect Fit</h3>
-                    <h2 class="display-5 mb-3 mb-xl-4" style="color:rgb(207, 194, 194)">We Craft Every Step to Elevate Your Style</h2>
-                    <p class="mb-3 mb-xl-4" style="color:rgb(207, 194, 194)">At our shoemaking atelier, we blend craftsmanship with innovation to offer you a curated selection of footwear that not only fits perfectly but also enhances your unique style. From timeless classics to the latest trends, we're dedicated to delivering shoes that make a statement.</p>
-                    <a data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in" href="/fashion" class="btn btn-primary rounded-pill">Explore Our Collection</a>
-                </div>
-                <hr>
-            </div>
-            <div class="col-12 col-lg-7">
-                <div class="row gy-4 gx-3">
-                    <div data-aos="fade-down-right" class="col-12 col-sm-6 card-service">
-                        <div class="card border-0 shadow-lg glass-effect">
-                            <div class="card-body text-center p-4 p-xxl-5">
-                                <i class="fa fa-line-chart"></i> <!-- Icon for trend -->
-                                <h4 class="mb-4">Quality First</h4>
-                                <p class="mb-4 text-dark">We're obsessed with quality. Each shoe is meticulously crafted using the finest materials, ensuring durability and comfort. Walk confidently with our premium footwear.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-aos="fade-down-left" class="col-12 col-sm-6 card-service">
-                        <div class="card border-0 shadow-lg glass-effect">
-                            <div class="card-body text-center p-4 p-xxl-5">
-                                <i class="fa fa-shopping-bag"></i> <!-- Icon for fashion -->
-
-                                <h4 class="mb-4">Fashion Forward</h4>
-                                <p class="mb-4 text-dark">Stay ahead in style with our trendsetting footwear. Our design team ensures that you're always on the cutting edge of fashion, making a statement wherever you go.Just smile.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- new-section -->
-<div class="container mt-5 mb-5 reviews">
-    <div class="row">
-        <div class="col-md-12">
-            <div
-                class="d-flex flex-row justify-content-between align-items-center filters">
-                <h6>Showing best reviews</h6>
-                <div class="right-sort">
-                    <div class="sort-by"><span class="mr-1">Sort by:</span><a
-                            href="#">Most popular</a><i
-                            class="fa fa-angle-down ml-1"></i></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row mt-1">
-        <div class="col-md-4">
-            <div  data-aos="zoom-in" class="p-card bg-white p-2 rounded px-3">
-                <div class="d-flex align-items-center credits"><img
-                        src="https://i.imgur.com/hlz6G90.png"
-                        width="16px"><span class="text-black-50 ml-2">400 votes</span></div>
-                <h5 class="mt-2">Best shoe fittings</h5><span
-                    class="badge  py-1 mb-2">Raman Kumar , UP</span><span
-                    class="d-block mb-5">Best ever fittings loved the services
-                    provided by FeetSoe specially the
-                    staff.</span>
-                <div class="d-flex justify-content-between stats">
-                    <div><i class="fa fa-calendar-o"></i><span class="ml-2">5
-                            days ago</span></div>
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="profiles"><img class="rounded-circle"
-                                src="https://th.bing.com/th/id/OIP.wrpexvxKkzP0pNPus0zfygAAAA?pid=ImgDet&rs=1"
-                                width="30"><img class="rounded-circle"
-                                src=" https://i.imgur.com/GHCtqgp.jpg"
-                                width="30"><img class="rounded-circle"
-                                src="https://i.imgur.com/UL0GS75.jpg"
-                                width="30"></div><span class="ml-3">12</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div data-aos="zoom-out" class="col-md-4">
-            <div class="p-card bg-white p-2 rounded px-3">
-                <div class="d-flex align-items-center credits"><img
-                        src="https://i.imgur.com/hlz6G90.png"
-                        width="16px"><span class="text-black-50 ml-2">10 votes</span></div>
-                <h5 class="mt-2">Vibrant colors within a single product category</h5><span
-                    class="badge py-1 mb-2">Arti , Agra</span><span
-                    class="d-block mb-5">Vibrant color with a lot of
-                    variety of products, Bahut achhi shop</span>
-                <div class="d-flex justify-content-between stats">
-                    <div><i class="fa fa-calendar-o"></i><span class="ml-2">2
-                            days ago</span></div>
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="profiles"><img class="rounded-circle"
-                                src="https://i.imgur.com/KcxKRBm.jpg"
-                                width="30"><img class="rounded-circle"
-                                src="https://profile-images.xing.com/images/b11e6bc3d9512f99d678bcccb0fed89b-2/abhay-kumar.256x256.jpg"
-                                width="30"><img class="rounded-circle"
-                                src="https://media.licdn.com/dms/image/D4E03AQFUh4zn-O9-Pw/profile-displayphoto-shrink_800_800/0/1661763027450?e=2147483647&v=beta&t=3vh4VrrvAaa3lvfFzABzOLJo-HOCVXO7Zq6mlR7pNy8"
-                                width="30"></div><span class="ml-3">16</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div  data-aos="zoom-in" class="col-md-4">
-            <div class="p-card bg-white p-2 rounded px-3">
-                <div class="d-flex align-items-center credits"><img
-                        src="https://i.imgur.com/hlz6G90.png"
-                        width="16px"><span class="text-black-50 ml-2">200 votes</span></div>
-                <h5 class="mt-2">Excellent customer service</h5><span
-                    class="badge py-1 mb-2">Neha Sharma,
-                    Mumbai</span><span class="d-block mb-5">I had a wonderful
-                    shopping experience with FeetSoe. The
-                    staff is courteous and helped me find the perfect shoes.</span>
-                <div class="d-flex justify-content-between stats">
-                    <div><i class="fa fa-calendar-o"></i><span class="ml-2">4
-                            days ago</span></div>
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="profiles"><img class="rounded-circle"
-                                src="https://th.bing.com/th/id/OIP.wrpexvxKkzP0pNPus0zfygAAAA?pid=ImgDet&rs=1"
-                                width="30"><img class="rounded-circle"
-                                src="https://i.imgur.com/KcxKRBm.jpg"
-                                width="30"><img class="rounded-circle"
-                                src="https://i.imgur.com/GHCtqgp.jpg"
-                                width="30"></div><span class="ml-3">14</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div data-aos="zoom-out" class="col-md-4">
-            <div class="p-card bg-white p-2 rounded px-3">
-                <div class="d-flex align-items-center credits"><img
-                        src="https://i.imgur.com/hlz6G90.png"
-                        width="16px"><span class="text-black-50 ml-2">15 votes</span></div>
-                <h5 class="mt-2">Great selection of footwear</h5><span
-                    class="badge py-1 mb-2">Suresh,
-                    Delhi</span><span class="d-block mb-5">FeetSoe offers a wide
-                    range of footwear options. I found
-                    the perfect pair for every occasion.</span>
-                <div class="d-flex justify-content-between stats">
-                    <div><i class="fa fa-calendar-o"></i><span class="ml-2">3
-                            days ago</span></div>
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="profiles"><img class="rounded-circle"
-                                src="https://media.licdn.com/dms/image/C4E03AQG4W8cg-Vtyow/profile-displayphoto-shrink_800_800/0/1542605648049?e=2147483647&v=beta&t=LuPK5-aeGI31SGFuC-OKF9N_hMqrHipN-AU8KyTKtL4"
-                                width="30"><img class="rounded-circle"
-                                src="https://th.bing.com/th/id/OIP.FMY7QMoGv9-9P0W5H1-6MwHaHa?pid=ImgDet&rs=1"
-                                width="30"><img class="rounded-circle"
-                                src="https://i1.rgstatic.net/ii/profile.image/596025890844672-1519115054216_Q512/Nuwan-De-Silva-2.jpg"
-                                width="30"></div><span class="ml-3">18</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div  data-aos="zoom-in" class="col-md-4">
-            <div class="p-card bg-white p-2 rounded px-3">
-                <div class="d-flex align-items-center credits"><img
-                        src="https://i.imgur.com/hlz6G90.png"
-                        width="16px"><span class="text-black-50 ml-2">300 votes</span></div>
-                <h5 class="mt-2">Impressive shoe collection</h5><span
-                    class="badge py-1 mb-2">Rajesh Khanna,
-                    Kolkata</span><span class="d-block mb-5">FeetSoe never
-                    disappoints with its wide range of shoe
-                    collections. I always find the latest styles here.</span>
-                <div class="d-flex justify-content-between stats">
-                    <div><i class="fa fa-calendar-o"></i><span class="ml-2">6
-                            days ago</span></div>
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="profiles"><img class="rounded-circle"
-                                src="https://media.licdn.com/dms/image/C4D03AQG8Rc1jnstlDQ/profile-displayphoto-shrink_800_800/0/1604096562892?e=2147483647&v=beta&t=D-Xyx9LO1QerfUQOBxqrb6cBGd39NXLTtot5QlOZZYM"
-                                width="30"><img class="rounded-circle"
-                                src="https://th.bing.com/th/id/OIP.Rda2aApJlI6269mqOKwrIwHaHa?pid=ImgDet&rs=1"
-                                width="30"><img class="rounded-circle"
-                                src="https://th.bing.com/th/id/OIP.yIi3Fz_fyCH0U-44BuDRrwHaHa?pid=ImgDet&rs=1"
-                                width="30"></div><span class="ml-3">22</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div data-aos="zoom-out" class="col-md-4">
-            <div class="p-card bg-white p-2 rounded px-3">
-                <div class="d-flex align-items-center credits"><img
-                        src="https://i.imgur.com/hlz6G90.png"
-                        width="16px"><span class="text-black-50 ml-2">25 votes</span></div>
-                <h5 class="mt-2">Exceptional customer support</h5><span
-                    class="badge py-1 mb-2">Shreya,
-                    Pune</span><span class="d-block mb-5">I had a problem with
-                    my order, and the customer support at
-                    FeetSoe was incredibly helpful in resolving it promptly.</span>
-                <div class="d-flex justify-content-between stats">
-                    <div><i class="fa fa-calendar-o"></i><span class="ml-2">4
-                            days ago</span></div>
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="profiles"><img class="rounded-circle"
-                                src="https://th.bing.com/th/id/OIP.1EC-BVX2eqJePezHsejY-wAAAA?pid=ImgDet&rs=1"
-                                width="30"><img class="rounded-circle"
-                                src="https://th.bing.com/th/id/OIP.d9o5mcSvQbAkYralSQie7wAAAA?pid=ImgDet&rs=1"
-                                width="30"><img class="rounded-circle"
-                                src="https://avatars.githubusercontent.com/u/94613013?v=4?s=400"
-                                width="30"></div>
-                        <span class="ml-3">14</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- About Us Section with Bootstrap Grid -->
-<section id="about">
-    <div class="container">
+    <!-- reviews section -->
+    <div class="container mt-5 mb-5 reviews">
         <div class="row">
-            <div class="col-lg-6 order-lg-1"> <!-- Content Column -->
-                <h2>About Us</h2>
-                <p data-aos="zoom-out">Welcome to FeetShoe, where style meets
-                    comfort! Our mission is simple yet profound: to enhance your
-                    personality and appearance through the perfect pair of
-                    shoes.</p>
-                <br>
-
-                <h2>Your Style, Your Shoes</h2>
-                <p data-aos="zoom-out">At FeetShoe, we understand that your
-                    choice of footwear speaks volumes about your personal style.
-                    The right pair of shoes can elevate any outfit, adding a
-                    touch of sophistication and confidence to your appearance.</p>
-                <br>
-
-                <h2>The Art of Perfect Fit</h2>
-                <p data-aos="zoom-out">We believe that wearing the right shoe
-                    size is not just about comfort; it's about health and
-                    confidence. Ill-fitting shoes can lead to discomfort, pain,
-                    and even long-term foot issues. Our team is dedicated to
-                    helping you find the perfect fit, ensuring you look and feel
-                    your best with every step.</p>
-                <br>
-
-                <h2>Your Trusted Shoe Advisors</h2>
-                <p data-aos="zoom-out">FeetShoe is more than a store; we are
-                    your trusted advisors in the world of footwear. Our team of
-                    knowledgeable professionals is passionate about shoes and
-                    committed to assisting you in selecting the ideal pair for
-                    every occasion. Whether it's formal, casual, or athletic, we
-                    have the perfect shoe to match your unique style.</p>
+            <div class="col-md-12">
+                <div class="d-flex flex-row justify-content-between align-items-center filters">
+                    <h6>Showing best reviews</h6>
+                    <div class="right-sort">
+                        <div class="sort-by"><span class="mr-1">Sort by:</span><a href="#">Most popular</a><i
+                                class="fa fa-angle-down ml-1"></i></div>
+                    </div>
+                </div>
             </div>
-            <div class="foot-video col-lg-6 mt-2 order-lg-2">
-                <!-- Image Column -->
-                <iframe width="560" height="600"
-                    src="https://www.youtube.com/embed/5YP5G4waM0M?si=zzoQzbE1dKdhJEzU"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
+        </div>
+        <div class="row mt-1">
+            <div class="col-md-4">
+                <div data-aos="zoom-in" class="p-card bg-white p-2 rounded px-3">
+                    <div class="d-flex align-items-center credits"><img src="https://i.imgur.com/hlz6G90.png"
+                            width="16px"><span class="text-black-50 ml-2">400 votes</span></div>
+                    <h5 class="mt-2">Best shoe fittings</h5><span class="badge  py-1 mb-2">Raman Kumar , UP</span><span
+                        class="d-block mb-5">Best ever fittings loved the services
+                        provided by FeetSoe specially the
+                        staff.</span>
+                    <div class="d-flex justify-content-between stats">
+                        <div><i class="fa fa-calendar-o"></i><span class="ml-2">5
+                                days ago</span></div>
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="profiles"><img class="rounded-circle"
+                                    src="https://th.bing.com/th/id/OIP.wrpexvxKkzP0pNPus0zfygAAAA?pid=ImgDet&rs=1"
+                                    width="30"><img class="rounded-circle" src=" https://i.imgur.com/GHCtqgp.jpg"
+                                    width="30"><img class="rounded-circle" src="https://i.imgur.com/UL0GS75.jpg"
+                                    width="30"></div><span class="ml-3">12</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="zoom-out" class="col-md-4">
+                <div class="p-card bg-white p-2 rounded px-3">
+                    <div class="d-flex align-items-center credits"><img src="https://i.imgur.com/hlz6G90.png"
+                            width="16px"><span class="text-black-50 ml-2">10 votes</span></div>
+                    <h5 class="mt-2">Vibrant colors within a single product category</h5><span
+                        class="badge py-1 mb-2">Arti , Agra</span><span class="d-block mb-5">Vibrant color with a lot of
+                        variety of products, Bahut achhi shop</span>
+                    <div class="d-flex justify-content-between stats">
+                        <div><i class="fa fa-calendar-o"></i><span class="ml-2">2
+                                days ago</span></div>
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="profiles"><img class="rounded-circle" src="https://i.imgur.com/KcxKRBm.jpg"
+                                    width="30"><img class="rounded-circle"
+                                    src="https://profile-images.xing.com/images/b11e6bc3d9512f99d678bcccb0fed89b-2/abhay-kumar.256x256.jpg"
+                                    width="30"><img class="rounded-circle"
+                                    src="https://media.licdn.com/dms/image/D4E03AQFUh4zn-O9-Pw/profile-displayphoto-shrink_800_800/0/1661763027450?e=2147483647&v=beta&t=3vh4VrrvAaa3lvfFzABzOLJo-HOCVXO7Zq6mlR7pNy8"
+                                    width="30"></div><span class="ml-3">16</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="zoom-in" class="col-md-4">
+                <div class="p-card bg-white p-2 rounded px-3">
+                    <div class="d-flex align-items-center credits"><img src="https://i.imgur.com/hlz6G90.png"
+                            width="16px"><span class="text-black-50 ml-2">200 votes</span></div>
+                    <h5 class="mt-2">Excellent customer service</h5><span class="badge py-1 mb-2">Neha Sharma,
+                        Mumbai</span><span class="d-block mb-5">I had a wonderful
+                        shopping experience with FeetSoe. The
+                        staff is courteous and helped me find the perfect shoes.</span>
+                    <div class="d-flex justify-content-between stats">
+                        <div><i class="fa fa-calendar-o"></i><span class="ml-2">4
+                                days ago</span></div>
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="profiles"><img class="rounded-circle"
+                                    src="https://th.bing.com/th/id/OIP.wrpexvxKkzP0pNPus0zfygAAAA?pid=ImgDet&rs=1"
+                                    width="30"><img class="rounded-circle" src="https://i.imgur.com/KcxKRBm.jpg"
+                                    width="30"><img class="rounded-circle" src="https://i.imgur.com/GHCtqgp.jpg"
+                                    width="30"></div><span class="ml-3">14</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="zoom-out" class="col-md-4">
+                <div class="p-card bg-white p-2 rounded px-3">
+                    <div class="d-flex align-items-center credits"><img src="https://i.imgur.com/hlz6G90.png"
+                            width="16px"><span class="text-black-50 ml-2">15 votes</span></div>
+                    <h5 class="mt-2">Great selection of footwear</h5><span class="badge py-1 mb-2">Suresh,
+                        Delhi</span><span class="d-block mb-5">FeetSoe offers a wide
+                        range of footwear options. I found
+                        the perfect pair for every occasion.</span>
+                    <div class="d-flex justify-content-between stats">
+                        <div><i class="fa fa-calendar-o"></i><span class="ml-2">3
+                                days ago</span></div>
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="profiles"><img class="rounded-circle"
+                                    src="https://media.licdn.com/dms/image/C4E03AQG4W8cg-Vtyow/profile-displayphoto-shrink_800_800/0/1542605648049?e=2147483647&v=beta&t=LuPK5-aeGI31SGFuC-OKF9N_hMqrHipN-AU8KyTKtL4"
+                                    width="30"><img class="rounded-circle"
+                                    src="https://th.bing.com/th/id/OIP.FMY7QMoGv9-9P0W5H1-6MwHaHa?pid=ImgDet&rs=1"
+                                    width="30"><img class="rounded-circle"
+                                    src="https://i1.rgstatic.net/ii/profile.image/596025890844672-1519115054216_Q512/Nuwan-De-Silva-2.jpg"
+                                    width="30"></div><span class="ml-3">18</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="zoom-in" class="col-md-4">
+                <div class="p-card bg-white p-2 rounded px-3">
+                    <div class="d-flex align-items-center credits"><img src="https://i.imgur.com/hlz6G90.png"
+                            width="16px"><span class="text-black-50 ml-2">300 votes</span></div>
+                    <h5 class="mt-2">Impressive shoe collection</h5><span class="badge py-1 mb-2">Rajesh Khanna,
+                        Kolkata</span><span class="d-block mb-5">FeetSoe never
+                        disappoints with its wide range of shoe
+                        collections. I always find the latest styles here.</span>
+                    <div class="d-flex justify-content-between stats">
+                        <div><i class="fa fa-calendar-o"></i><span class="ml-2">6
+                                days ago</span></div>
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="profiles"><img class="rounded-circle"
+                                    src="https://media.licdn.com/dms/image/C4D03AQG8Rc1jnstlDQ/profile-displayphoto-shrink_800_800/0/1604096562892?e=2147483647&v=beta&t=D-Xyx9LO1QerfUQOBxqrb6cBGd39NXLTtot5QlOZZYM"
+                                    width="30"><img class="rounded-circle"
+                                    src="https://th.bing.com/th/id/OIP.Rda2aApJlI6269mqOKwrIwHaHa?pid=ImgDet&rs=1"
+                                    width="30"><img class="rounded-circle"
+                                    src="https://th.bing.com/th/id/OIP.yIi3Fz_fyCH0U-44BuDRrwHaHa?pid=ImgDet&rs=1"
+                                    width="30"></div><span class="ml-3">22</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="zoom-out" class="col-md-4">
+                <div class="p-card bg-white p-2 rounded px-3">
+                    <div class="d-flex align-items-center credits"><img src="https://i.imgur.com/hlz6G90.png"
+                            width="16px"><span class="text-black-50 ml-2">25 votes</span></div>
+                    <h5 class="mt-2">Exceptional customer support</h5><span class="badge py-1 mb-2">Shreya,
+                        Pune</span><span class="d-block mb-5">I had a problem with
+                        my order, and the customer support at
+                        FeetSoe was incredibly helpful in resolving it promptly.</span>
+                    <div class="d-flex justify-content-between stats">
+                        <div><i class="fa fa-calendar-o"></i><span class="ml-2">4
+                                days ago</span></div>
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="profiles"><img class="rounded-circle"
+                                    src="https://th.bing.com/th/id/OIP.1EC-BVX2eqJePezHsejY-wAAAA?pid=ImgDet&rs=1"
+                                    width="30"><img class="rounded-circle"
+                                    src="https://th.bing.com/th/id/OIP.d9o5mcSvQbAkYralSQie7wAAAA?pid=ImgDet&rs=1"
+                                    width="30"><img class="rounded-circle"
+                                    src="https://avatars.githubusercontent.com/u/94613013?v=4?s=400" width="30"></div>
+                            <span class="ml-3">14</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</section>
 
-<!-- Services Section -->
-<section id="services" class="bg-light py-5">
-    <div class="container">
-        <div class="pb-5">
-            <h2 class="text-center">Our <span style="color:orange ">S</span>ervices
+    <!-- About Us Section with Bootstrap Grid -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 order-lg-1"> <!-- Content Column -->
+                    <h2>About Us</h2>
+                    <p data-aos="zoom-out">Welcome to FeetShoe, where style meets
+                        comfort! Our mission is simple yet profound: to enhance your
+                        personality and appearance through the perfect pair of
+                        shoes.</p>
+                    <br>
+
+                    <h2>Your Style, Your Shoes</h2>
+                    <p data-aos="zoom-out">At FeetShoe, we understand that your
+                        choice of footwear speaks volumes about your personal style.
+                        The right pair of shoes can elevate any outfit, adding a
+                        touch of sophistication and confidence to your appearance.</p>
+                    <br>
+
+                    <h2>The Art of Perfect Fit</h2>
+                    <p data-aos="zoom-out">We believe that wearing the right shoe
+                        size is not just about comfort; it's about health and
+                        confidence. Ill-fitting shoes can lead to discomfort, pain,
+                        and even long-term foot issues. Our team is dedicated to
+                        helping you find the perfect fit, ensuring you look and feel
+                        your best with every step.</p>
+                    <br>
+
+                    <h2>Your Trusted Shoe Advisors</h2>
+                    <p data-aos="zoom-out">FeetShoe is more than a store; we are
+                        your trusted advisors in the world of footwear. Our team of
+                        knowledgeable professionals is passionate about shoes and
+                        committed to assisting you in selecting the ideal pair for
+                        every occasion. Whether it's formal, casual, or athletic, we
+                        have the perfect shoe to match your unique style.</p>
+                </div>
+                <div class="foot-video col-lg-6 mt-2 order-lg-2">
+                    <!-- Image Column -->
+                    <iframe width="560" height="600" src="https://www.youtube.com/embed/5YP5G4waM0M?si=zzoQzbE1dKdhJEzU"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-light py-5">
+        <div class="container">
+            <div class="pb-5">
+                <h2 class="text-center">Our <span style="color:orange ">S</span>ervices
             </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img
-                            src="https://th.bing.com/th/id/OIP.z34n-01RShl4hmvVJOukoQHaEf?pid=ImgDet&rs=1"
+                        <img src="https://th.bing.com/th/id/OIP.z34n-01RShl4hmvVJOukoQHaEf?pid=ImgDet&rs=1"
                             alt="Service 1" class="card-img-top">
                         <div class="card-body">
                             <h5 data-aos="fade-down-right" class="card-title">Extensive
@@ -377,8 +350,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img
-                            src="https://www.activefootstore.com/wp-content/uploads/2018/02/shoe-fitting-1024x668-768x501.jpg"
+                        <img src="https://www.activefootstore.com/wp-content/uploads/2018/02/shoe-fitting-1024x668-768x501.jpg"
                             alt="Service 2" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Personalized Fitting and
@@ -399,8 +371,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img
-                            src="https://thumbs.dreamstime.com/b/selling-online-shopping-woman-packing-shoes-sneakers-cardboard-box-prepare-parcel-to-delivery-service-customer-ecommerce-154078523.jpg"
+                        <img src="https://thumbs.dreamstime.com/b/selling-online-shopping-woman-packing-shoes-sneakers-cardboard-box-prepare-parcel-to-delivery-service-customer-ecommerce-154078523.jpg"
                             alt="Service 3" class="card-img-top">
                         <div class="card-body">
                             <h5 data-aos="fade-down-left" class="card-title">Convenient
@@ -428,6 +399,5 @@
         </div>
 
     </section>
-    <!-- include foooter start -->
-    <%-include('include/_footer')%>
-    <!-- include footer end -->
+    
+    <%-include('include /_footer')%>

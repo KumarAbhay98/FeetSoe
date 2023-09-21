@@ -14,9 +14,8 @@ exports.create = (req, res) => {
         closingTime: req.body.closingTime,
         image: req.body.image,
         description: req.body.description,
-        
-    });
 
+    });
     // Save the data in the database
     Stores
         .save()
@@ -27,6 +26,9 @@ exports.create = (req, res) => {
             res.status(500).send({ message: err.message || 'An error occurred while creating the product Store' });
         });
 };
+
+
+
 
 // Retrieve and return all Stores / retrieve a single Store
 exports.find = (req, res) => {
@@ -57,8 +59,10 @@ exports.find = (req, res) => {
                 res.status(500).send({ message: err.message || "Error Ocuured while retriving user information" })
             })
     }
-
 };
+
+
+
 
 // Update the Stores by Store id
 exports.update = (req, res) => {

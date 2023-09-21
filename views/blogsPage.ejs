@@ -12,8 +12,6 @@
 
 <div class="container">
     <h1 class="my-4 text-center"><span style="color:orange">Blogs</span></h1>
-
-
     <div class="row" id="shoes-container">
         <!-- Loop through shoe data and display cards -->
         <% for (let i = 0; i <  blogs.length; i++) { %>
@@ -31,9 +29,6 @@
                         <p class="card-text">
                             <%=  blogs[i].excerpt %>
                         </p>
-                        <!-- <p class="card-text"><strong>Description</strong>
-                            <%=  blogs[i].description %>
-                        </p> -->
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <a href="/blogsViewPage/<%=  blogs[i].slug %>">
@@ -47,7 +42,4 @@
         <% } %>
     </div>
 </div>
-
-
-
 <%- include('include/_footer') %>

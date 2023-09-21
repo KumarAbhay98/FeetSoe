@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-
 // Mongoose Schema of my product called shoes
 const shoeSchema = new mongoose.Schema({
     name: {
@@ -27,7 +26,5 @@ const shoeSchema = new mongoose.Schema({
         required: true,
     }
 });
-
 const Shoe = mongoose.model('Shoe', shoeSchema);
-
 module.exports = Shoe;
