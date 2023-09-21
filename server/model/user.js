@@ -21,11 +21,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please enter a password'],
         minlength: [6, 'Minimum password length is 6 characters']
-    },
-    profileImage: {
-      type: String, // Store the path or reference to the image
-      required:true,
-  },
+    }
 });
 
 // Fire a function before doc saved to db (hashing the password)
