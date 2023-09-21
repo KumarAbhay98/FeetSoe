@@ -1,0 +1,700 @@
+/* Reset CSS for all elements */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Define main color variable */
+:root {
+    --main-color: #FFA500;
+}
+
+/* Header Styles */
+.card-header {
+    background-color: var(--main-color);
+    color: #222;
+}
+
+.btn-secondary {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    color: #222;
+}
+
+.btn-secondary:hover {
+    background-color: #222;
+    color: var(--main-color);
+}
+
+.form-control {
+    background-color: #333;
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+/* Navbar Styles */
+.custom-navbar {
+    background-color: rgba(2, 2, 2, 0.079);
+    height: 7rem;
+}
+
+.nav-link {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: rgb(185, 124, 13);
+    text-decoration: none;
+}
+
+.navbar-scrolled {
+    background-color: rgba(2, 2, 2, 0.972);
+    height: 7rem;
+}
+
+.custom-navbar .logo {
+    max-width: 200px;
+}
+
+.custom-navbar .nav-item {
+    padding: 0 15px;
+}
+
+.custom-navbar .signup-btn {
+    margin-left: 15px;
+}
+
+/* Media Queries for Brand Logo */
+@media (min-width: 768px) {
+    .custom-navbar .logo {
+        max-width: 150px;
+        margin-top: -1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-navbar .logo {
+        max-width: 150px;
+        margin-top: -1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-navbar .logo {
+        max-width: 120px;
+        margin-top: -1rem;
+    }
+}
+
+/* Hero Section Styles */
+.cover-section {
+    background-image: url('https://media.giphy.com/media/l0MYGBrJR2Uao0y52/giphy.gif');
+    background-size: cover;
+    background-position: center;
+    padding-top: 5rem;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+@media (max-width:768px) {
+    .home-hero-content {
+        margin-top: 5rem;
+    }
+}
+
+.cover-section h1 {
+    font-size: 3rem;
+}
+
+.cover-section p {
+    font-size: 1.5rem;
+}
+
+/* Card Styles */
+.card-bodys {
+    background: linear-gradient(rgb(134, 67, 22), black);
+}
+
+.card-btn {
+    background: rgb(0, 0, 0);
+    color: rgb(227, 146, 65);
+    transition: ease-in-out;
+    border: 1px solid rgb(176, 97, 17);
+    margin-right: 0.5rem;
+}
+
+.card-btn:hover {
+    background: rgba(30, 29, 29, 0.734);
+    transition-delay: 500ms;
+    color: rgb(176, 97, 17);
+}
+
+.signup-container {
+    padding-top: 5rem;
+}
+
+.signup-btn {
+    border: 1px solid rgb(176, 97, 17);
+    color: rgb(176, 97, 17);
+}
+
+.signup-btn:hover {
+    border: 2px solid rgb(176, 97, 17);
+    color: rgb(176, 97, 17);
+}
+
+#feature {
+    background: rgb(252, 176, 69);
+    background: linear-gradient(90deg, rgba(252, 176, 69, 1) 0%, rgba(125, 85, 85, 1) 50%, rgba(0, 0, 0, 1) 100%);
+}
+
+/* Brand Icons Section Styles */
+.card-bodyss {
+    background: rgba(255, 255, 255, 0.21);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.4px);
+    -webkit-backdrop-filter: blur(10.4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card-img-custom {
+    height: 400px;
+    object-fit: cover;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container .col-lg-3 {
+    flex: 1;
+    max-width: 10%;
+    padding: 2.5rem 0.2rem;
+}
+
+@media (max-width:768px) {
+    .logo-container .col-lg-3 {
+        flex: 1;
+        max-width: 15%;
+        gap: 0.3rem;
+        padding: 1rem 0.5rem;
+    }
+}
+
+.logo-container .col-lg-3 img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fashion Category Styles */
+.btn-group {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fashion-category-btn {
+    background-color: #000;
+    color: var(--main-color);
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style the cards */
+.fashion-card {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 5px #888888;
+}
+
+/* Additional styling for the card title */
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Additional styling for the card text */
+.card-text {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Fashion Card Styles */
+.fashion-card {
+    box-shadow: 1px -2px 21px -4px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 1px -2px 21px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px -2px 21px -4px rgba(0, 0, 0, 0.75);
+}
+
+/* Custom CSS for Fixed Image Height */
+.card-img-custom {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Fashion Image Section Styles */
+.fashion-image {
+    background-image: url('https://i.pinimg.com/originals/44/70/f8/4470f811037ecfdd235f8e5e9d21a669.gif');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Fashion Cover Text Styles */
+.fashion-cover-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+}
+
+/* About Section Styles */
+.about-section img {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Jumbotron Styles for About Page */
+.jumbotron {
+    color: var(--main-color);
+}
+
+/* Gym-Khana Section Styles */
+.parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.529);
+}
+
+div.hero-text {
+    border-color: rgba(0, 0, 0, 0.568);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    color: rgb(242, 238, 238);
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 3rem auto;
+}
+
+/* Cover Section Styles */
+.cover {
+    position: relative;
+    height: 100vh;
+}
+
+.cover-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    opacity: 0.8;
+    background-attachment: fixed;
+}
+
+.container {
+    position: relative;
+    z-index: 20;
+}
+
+/* Hero Container Styles */
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        max-width: 300px;
+    }
+}
+
+.content-hero {
+    text-align: center;
+    color: white;
+}
+
+/* Blog Thumbnail Styles */
+.blog-thumbnail {
+    text-align: center;
+}
+
+.blogThumbnail-image {
+    height: 200px;
+    max-width: 100%;
+}
+
+/* Smooth Button Transition Styles */
+.btn-smooth {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-smooth:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Style the navbar-toggler-icon as a cross */
+.navbar-toggler-icon {
+    background-color: var(--main-color);
+}
+
+/* When the button is in the "collapsed" state, style the cross icon */
+.navbar-toggler[aria-expanded="false"] .navbar-toggler-icon {
+    content: '\00d7'; /* Unicode character for a cross (×) */
+    color: white;
+    display: block;
+    font-size: 24px; /* Adjust the size as needed */
+}
+
+/* Contact CSS */
+.contact-container {
+    background-color: black;
+    color: var(--main-color);
+    padding: 60px 0;
+}
+
+.contact-form {
+    background-color: #343a40;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* FAQ Section */
+.faq-container {
+    background-color: black;
+    color: var(--main-color);
+    padding: 60px 0;
+}
+
+.faq-item {
+    background-color: #343a40;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.faq-item .card-header {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.faq-item .card-header a {
+    display: block;
+    padding: 20px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.faq-item .card-header a:hover {
+    background-color: #343a40;
+}
+
+.faq-item .card-body {
+    padding: 20px 30px;
+}
+
+/* Shipping Section */
+.shipping-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.shipping-heading {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.shipping-content {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Terms and Conditions */
+.terms-section {
+    background-color: #000;
+    color: var(--main-color);
+    padding: 60px 0;
+}
+
+.terms-heading {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.terms-content {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.btn-primary:hover {
+    background-color: #FF8C00;
+    border-color: #FF8C00;
+}
+
+/* About Section
+
+/* About Section Styles */
+#about {
+    padding: 3rem 2rem;
+}
+
+/* Signup Page Styles */
+.bg-dark-orange {
+    background-color: var(--mainColor);
+}
+
+.text-dark-orange {
+    color: var(--mainColor);
+}
+
+/* Media Query for Video */
+@media (max-width: 768px) {
+    .foot-video iframe {
+        width: 100%;
+    }
+}
+
+/* Cart Styles */
+.cart-container {
+    background-color: #000;
+    border: 1px solid var(--mainColor);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.cart-item {
+    border-bottom: 1px solid var(--mainColor);
+    padding: 10px 0;
+}
+
+.cart-total {
+    font-size: 1.5rem;
+    color: var(--mainColor);
+    margin-top: 20px;
+    text-align: right;
+}
+
+/* Profile Page Styles */
+.profile-container {
+    background-color: #000;
+    border: 1px solid var(--mainColor);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.profile-picture {
+    text-align: center;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border: 5px solid var(--mainColor);
+    border-radius: 50%;
+}
+
+.profile-info {
+    margin-top: 20px;
+}
+
+.profile-info h3 {
+    color: var(--mainColor);
+}
+
+/* YouTube Section Styles */
+#about {
+    margin: 5rem;
+    padding: 5rem;
+}
+
+@media (max-width: 768px) {
+    #about {
+        margin: 2rem 1rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #about {
+        margin: 3rem 0.2rem;
+        padding: 2rem 0.2rem;
+    }
+}
+
+/* View Page Styles */
+.viewpage {
+    margin-top: 10rem;
+}
+
+.cartpage {
+    margin-top: 10rem;
+    max-width: 700px;
+    margin: 10rem auto;
+}
+
+/* Profile Page Styles */
+.profile-container {
+    background-color: var(--mainColor);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.profile-picture img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.profile-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.profile-actions a.btn {
+    margin-right: 10px;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+/* Loader Styles */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    border: 4px solid transparent;
+    border-top: 4px solid;
+    border-image: linear-gradient(45deg, #f26430, #000000);
+    border-image-slice: 1;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+}
+
+.loader-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #f26430; /* Orange color */
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Go Up Button Styles */
+#go-up-button {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index:999;
+}
+
+#go-up-button i {
+    color: black;
+    font-size: 24px;
+    z-index:999;
+}
+
+#go-up-button:hover {
+    background-color: #ff9900; /* Orange color on hover */
+}
+/* 
+reviews on index.ejs */
+.reviews{
+    padding:5rem
+}
+@media (max-width:768px){
+    .reviews{
+        padding:1rem
+    }
+    
+
+}
+

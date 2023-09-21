@@ -1,0 +1,77 @@
+<%- include('include/_header') %>
+<!-- "Go Up" button -->
+<div id="go-up-button" class="btn btn-dark" style="background-color: orange; display: none;">
+    <i class="fa fa-arrow-up" style="margin-right:1rem"></i>
+</div>
+<!-- Loader -->
+<div class="loader">
+    <div class="spinner"></div>
+    <div class="loader-text">FeetSoe...</div>
+</div>
+    <h2 class="text-center mt-5 mb-4" style="visibility: hidden;">"</h2>
+    <!-- Replace 'Your Desired Title' with your actual title -->
+    <div class="container">
+        <h2 class="text-center mt-5 mb-4">Login</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form action="/login" class="mb-4">
+                    <div class="form-group">
+                        <label for="emailSignIn">Email</label>
+                        <input type="email" class="form-control" id="emailSignIn" name="email"
+                            placeholder="Enter email">
+                        <div class="email error" style="color: red;"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="passwordSignIn">Password</label>
+                        <input type="password" class="form-control" id="passwordSignIn" name="password"
+                            placeholder="Password">
+                        <div class="password error" style="color: red;"></div>
+                    </div>
+                    <button class="btn btn-success btn-block">Login</button>
+                </form>
+                <div>Not A User? <a href="/signup" style="text-decoration: none;color:orange;">Sign Up</a></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        const emailError = document.querySelector('.email.error');
+        const passwordError = document.querySelector('.password.error');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // reset errors
+            emailError.textContent = '';
+            passwordError.textContent = '';
+
+            // get values
+            const email = form.email.value;
+            const password = form.password.value;
+
+            try {
+                const res = await fetch('/login', {
+                    method: 'POST',
+                    body: JSON.stringify({ email, password }),
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                
+                //below code is to handle errors
+                const data = await res.json();
+                console.log(data);
+                if (data.errors) {
+                    emailError.textContent = data.errors.email;
+                    passwordError.textContent = data.errors.password;
+                }
+                if (data.user) {
+                    location.assign('/');
+                }
+
+            }
+            catch (err) {
+                console.log(err);
+            }
+        });
+    </script>
+    <%- include('include/_footer') %>

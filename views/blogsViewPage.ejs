@@ -1,0 +1,25 @@
+<%- include('include/_header') %>
+<%- include('include/_cover') %>
+
+<div class="container my-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            
+                <article>
+                    <img src="<%= image %>" alt="<%= title %>"
+                        class="img-fluid mb-3">
+                    <h1 class="display-4"><%= title %></h1>
+                    <p class="lead"><strong>Author:</strong> <%= author %></p>
+                    <p class="lead"><strong>Date:</strong> <%= date %></p>
+                    <div class="blog-content">
+                        <%= description %>
+                    </div>
+                    <a href="/blogs" class="btn btn-primary mt-3">Back to Blogs</a>
+                </article>
+            
+        </div>
+    </div>
+</div>
+
+<%- include('include/_footer') %>
+

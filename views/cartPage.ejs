@@ -1,0 +1,77 @@
+<%- include('include/_header') %>
+<%- include('include/_cover') %>
+<!-- Loader -->
+<div class="loader">
+    <div class="spinner"></div>
+    <div class="loader-text">FeetSoe...</div>
+</div>
+
+<div class="container">
+    <h1 class="my-4 text-center"><span style="color: orange;">Shopping Cart</span></h1>
+    <h5 class="my-4 text-center"><span style="color: orange;">As of Now we are working on implementing Cart functionality . soon will provide you all this facility too.</span></h5>
+
+    <!-- Cart Items Table (Wrapped in a Responsive Container) -->
+    <div class="table-responsive">
+        <table class="table table-bordered table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th data-aos="fade-right" scope="row">1</th>
+                    <td data-aos="fade-left">Sandals</td>
+                    <td>2,000INR</td>
+                    <td>
+                        <input data-aos="zoom-out" type="number" class="form-control" value="" min="1">
+                    </td>
+                    <td data-aos="fade-left" >2,000INR</td>
+                    <td>
+                        <button data-aos="fade-right" type="button" class="btn btn-danger btn-sm">Remove</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th data-aos="fade-right" scope="row">1</th>
+                    <td data-aos="fade-left">flipflops</td>
+                    <td>2,000INR</td>
+                    <td>
+                        <input data-aos="zoom-out" type="number" class="form-control" value="" min="1">
+                    </td>
+                    <td data-aos="fade-left" >1,000INR</td>
+                    <td>
+                        <button data-aos="fade-right" type="button" class="btn btn-danger btn-sm">Remove</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th data-aos="fade-right" scope="row">1</th>
+                    <td data-aos="fade-left">Sneakers</td>
+                    <td>2,000INR</td>
+                    <td>
+                        <input data-aos="zoom-out" type="number" class="form-control" value="" min="1">
+                    </td>
+                    <td data-aos="fade-left" >3,000INR</td>
+                    <td>
+                        <button data-aos="fade-right" type="button" class="btn btn-danger btn-sm">Remove</button>
+                    </td>
+                </tr>
+                
+               
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Cart Summary -->
+    <div class="text-right">
+        <p><strong>Total: 6,000INR</strong></p>
+        <a href="/checkout" class="btn btn-success">Proceed to Checkout</a>
+    </div>
+</div>
+
+<%- include('include/_footer') %>

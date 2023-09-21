@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    
+    <div class="row">
+        <!-- First Outlet - Kanpur -->
+        <% for (let i = 0; i < stores.length; i++) { %>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="outlet-body">
+                <div class="card-hover">
+                    <div class="card-hover__content">
+                        <h3 class="card-hover__title">
+                            Visit our <span><%= stores[i].name %></span> Store
+                        </h3>
+                        <h5>Tap here..</h5><br>
+                        <p class="card-hover__text"><%= stores[i].description %></p>
+                        <p class="card-hover__text"><%= stores[i].openingTime %></p>
+                        <p class="card-hover__text"><%= stores[i].closingTime %></p>
+                        <a href="<%= stores[i].location %>" class="card-hover__link">
+                            <span>Get Directions</span>
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                        </a>
+                    </div>
+                    <img src="<%= stores[i].image %>"
+                        alt>
+                    <!-- Include the same card content as above -->
+                </div>
+            </div>
+        </div>
+        <% } %>
+    </div>
+</div>

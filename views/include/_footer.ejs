@@ -1,0 +1,158 @@
+<footer class="py-5 mt-5 border-top" style="background-color: rgb(176, 97, 17);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <img src="https://media1.thehungryjpeg.com/thumbs2/ori_3626077_zygn036jo35xe6tpv3cpsd3elkcemiwv40xdgjui_fs-monogram-logo-design.jpg"
+                    alt="" width="50" height="50">
+                <p class="text-white mt-3">© 2023-2030 FeetSoe</p>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <h5 class="text-white">Features</h5>
+                <ul class="list-unstyled">
+                    <li><a class="text-light" href="#">Cool stuff</a></li>
+                    <li><a class="text-light" href="#">Random feature</a></li>
+                    <li><a class="text-light" href="#">Team feature</a></li>
+                    <li><a class="text-light" href="#">Stuff for developers</a></li>
+                    <li><a class="text-light" href="#">Another one</a></li>
+                    <li><a class="text-light" href="#">Last time</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <h5 class="text-white">Resources</h5>
+                <ul class="list-unstyled">
+                    <li><a class="text-light" href="#">Resource</a></li>
+                    <li><a class="text-light" href="#">Resource name</a></li>
+                    <li><a class="text-light" href="#">Another resource</a></li>
+                    <li><a class="text-light" href="#">Final resource</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <h5 class="text-white">About</h5>
+                <ul class="list-unstyled">
+                    <li><a class="text-light" href="#">Team</a></li>
+                    <li><a class="text-light" href="#">Locations</a></li>
+                    <li><a class="text-light" href="#">Privacy</a></li>
+                    <li><a class="text-light" href="#">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery (include only once) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+<!-- Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+    AOS.init({
+        // Global settings:
+        disable:false,
+        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: 'aos-init', // class applied after initialization
+        animatedClassName: 'aos-animate', // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset:0, // offset (in px) from the original trigger point
+        delay: 2, // values from 0 to 3000, with step 50ms
+        duration: 800, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: true, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+    });
+
+</script>
+
+<script>
+    // jquery
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            // Check if we've scrolled past a certain point
+            if ($(this).scrollTop() > 10) {
+                // Apply the scrolled styles
+                $('.navbar').addClass('navbar-scrolled');
+            } else {
+                // Remove the scrolled styles
+                $('.navbar').removeClass('navbar-scrolled');
+            }
+        });
+    });
+
+    // JavaScript to hide the loader when the page is fully loaded
+    window.addEventListener('load', () => {
+        const loader = document.querySelector('.loader'); // Use the correct selector
+        loader.style.display = 'none';
+    });
+    // <!-- fashion shoe -->
+    // JavaScript function to filter shoes by category
+    function filterCategory(category) {
+        // Redirect to the appropriate category URL
+        window.location.href = `/fashion/${encodeURIComponent(category)}`;
+    }
+    // <!-- cart logic -->
+    function addToCart(productId) {
+        // Send an AJAX request to add the product to the cart
+        fetch(`/addToCart/${productId}`, {
+            method: 'POST',
+        })
+            .then(response => {
+                if (response.ok) {
+                    // Handle success (e.g., update the cart icon or message)
+                    console.log('Product added to cart successfully');
+                } else {
+                    // Handle error
+                    console.error('Failed to add product to cart');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+</script>
+<script>
+    // Function to show/hide the "Go Up" button based on scroll position
+    function toggleGoUpButton() {
+        const goUpButton = document.getElementById('go-up-button');
+        if (window.scrollY > window.innerHeight) {
+            goUpButton.style.display = 'block';
+        } else {
+            goUpButton.style.display = 'none';
+        }
+    }
+
+    // Function to scroll to the top of the page when the button is clicked
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    // Attach event listeners
+    window.addEventListener('scroll', toggleGoUpButton);
+    document.getElementById('go-up-button').addEventListener('click', scrollToTop);
+</script>
+
+
+</body>
+
+</html>

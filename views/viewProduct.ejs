@@ -1,0 +1,84 @@
+<%- include('include/_header') %>
+<!-- "Go Up" button -->
+<div id="go-up-button" class="btn btn-dark" style="background-color: orange; display: none;">
+    <i class="fa fa-arrow-up" style="margin-right:1rem"></i>
+</div>
+<!-- Loader -->
+<div class="loader">
+    <div class="spinner"></div>
+    <div class="loader-text">FeetSoe...</div>
+</div>
+<div class="container viewpage">
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Display the product image with animation -->
+            <img src="<%= image %>" class="img-fluid animate__animated animate__fadeIn" alt="<%= name %>">
+        </div>
+        <div class="col-md-6">
+            <!-- Display product details with style -->
+            <h1 class="mb-4">
+                <%= name %>
+            </h1>
+            <p class="small mb-2"><strong>Category:</strong>
+                <%= category %>
+            </p>
+            <p class="small mb-2"><strong>Price:</strong>
+                <%= price %>
+            </p>
+            <p class="small mb-4"><strong>Description:</strong>
+                <%= description %>
+            </p>
+
+            <!-- Quantity selectors and Buy Now button -->
+            <div class="d-flex align-items-center mb-5">
+                <button class="btn btn-outline-secondary btn-sm mr-2" id="decrease">-</button>
+                <span class="small mr-2" id="quantity">1</span>
+                <button class="btn btn-outline-secondary btn-sm mr-2" id="increase">+</button>
+                <!-- Add a data-product attribute to store product details -->
+
+                <a href="/cart" class="btn btn-primary btn-sm buy-now-button">Buy Now</a>
+
+                <!-- Warning message for quantity constraints -->
+                <p class="small text-danger" id="quantityWarning" style="display: none;">
+                    :) Quantity must be between 1 and 5.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Add this code in viewProduct.ejs -->
+<script>
+    // Initialize quantity variable
+    let quantity = 1;
+
+    // Get quantity elements
+    const quantitySpan = document.getElementById('quantity');
+    const quantityWarning = document.getElementById('quantityWarning');
+
+    // Get increase and decrease buttons
+    const decreaseButton = document.getElementById('decrease');
+    const increaseButton = document.getElementById('increase');
+
+    // Event listener for decrease button
+    decreaseButton.addEventListener('click', () => {
+        if (quantity > 1) {
+            quantity--;
+            quantitySpan.textContent = quantity;
+            quantityWarning.style.display = 'none';
+        }
+    });
+
+    // Event listener for increase button
+    increaseButton.addEventListener('click', () => {
+        if (quantity < 5) {
+            quantity++;
+            quantitySpan.textContent = quantity;
+            quantityWarning.style.display = 'none';
+        } else {
+            // Display warning if quantity exceeds 5
+            quantityWarning.style.display = 'block';
+        }
+    });
+</script>
+
+<%- include('include/_footer') %>

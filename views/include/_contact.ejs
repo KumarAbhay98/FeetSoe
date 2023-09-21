@@ -1,0 +1,72 @@
+<section id="contact">
+    <section class="contact-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Contact Us</h2>
+                    <p>We would love to hear from you. Send us a message!</p>
+                    <div class="contact-form">
+                        <form data-aos="fade-right" id="my-form" action="https://formspree.io/f/maygbbbn"
+                        method="POST">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" class="form-control" name="name" placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" class="form-control" name="email" placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" name="message" rows="4"
+                                    placeholder="Your message"></textarea>
+                            </div>
+                            <button type="submit" id="my-form-button" class="btn btn-warning">Submit</button>
+                            <p id="my-form-status" class="mt-2"></p>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6" style="padding-top:10rem">
+                    <div data-aos="fade-left" class="contact-info">
+                        <h2>Contact Information</h2><br>
+                        <p><strong>Address:</strong>101/A-block , Abhay Indusries , Pune</p>
+                        <p><strong>Email:</strong> Feetsoe@example.com</p>
+                        <p><strong>Phone:</strong> +91 xxxxxxxxx</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<script>
+    const form = document.getElementById("my-form");
+
+    async function handleSubmit(event) {
+        event.preventDefault();
+        const status = document.getElementById("my-form-status");
+        const data = new FormData(event.target);
+        try {
+            const response = await fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            if (response.ok) {
+                status.innerHTML = "Thanks for Contacting FeetSoe, we'll be getting back to you soon. Have a nice day";
+                form.reset();
+            } else {
+                const responseData = await response.json();
+                if (responseData.hasOwnProperty('errors')) {
+                    status.innerHTML = responseData.errors.map(error => error.message).join(", ");
+                } else {
+                    status.innerHTML = "Oops! There was a problem submitting your form";
+                }
+            }
+        } catch (error) {
+            status.innerHTML = "Oops! There was a problem submitting your form";
+        }
+    }
+    form.addEventListener("submit", handleSubmit);
+</script>

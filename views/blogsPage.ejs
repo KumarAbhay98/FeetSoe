@@ -1,0 +1,53 @@
+<%- include('include/_header') %>
+<%- include('include/_cover') %>
+<!-- "Go Up" button -->
+<div id="go-up-button" class="btn btn-dark" style="background-color: orange; display: none;">
+    <i class="fa fa-arrow-up" style="margin-right:1rem"></i>
+</div>
+<!-- Loader -->
+<div class="loader">
+    <div class="spinner"></div>
+    <div class="loader-text">FeetSoe...</div>
+</div>
+
+<div class="container">
+    <h1 class="my-4 text-center"><span style="color:orange">Blogs</span></h1>
+
+
+    <div class="row" id="shoes-container">
+        <!-- Loop through shoe data and display cards -->
+        <% for (let i = 0; i <  blogs.length; i++) { %>
+            <div class="col-md-4 mb-4 shoe-item" data-category="<%=  blogs[i].category %>">
+                <div class="card">
+                    <img src="<%=  blogs[i].image %>" alt="<%=  blogs[i].name %>"
+                        class="card-img-top card-img-custom">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%=  blogs[i].title %>
+                        </h5>
+                        <p class="card-text" style="max-height: 60px; overflow: hidden;">
+                            <%=  blogs[i].date %>
+                        </p>
+                        <p class="card-text">
+                            <%=  blogs[i].excerpt %>
+                        </p>
+                        <!-- <p class="card-text"><strong>Description</strong>
+                            <%=  blogs[i].description %>
+                        </p> -->
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="/blogsViewPage/<%=  blogs[i].slug %>">
+                                    <button type="button" class="btn card-btn">Read More...</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>
+
+
+
+<%- include('include/_footer') %>

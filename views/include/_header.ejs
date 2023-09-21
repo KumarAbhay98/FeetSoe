@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeetSoe</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/images/favicon.jpg" type="image/x-icon">
+
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    
+    
+
+    <!-- Additional CSS for specific components -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/bs-brain@2.0.0/components/services/service-5/assets/css/service-5.css" />
+
+    <!-- Font Awesome CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/outlet.css">
+
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- <link rel="stylesheet" href="css/outlet.css"> -->
+
+    <!-- <base href="http://localhost:3000/"> -->
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+<body>
+
+    <header id="header">
+        <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+            <div class="container">
+                <!-- Logo in the navbar -->
+                <a class="navbar-brand" href="/">
+                    <img src="/assets/images/FeetSoelogo.png" alt="Your Logo" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars" style="color:orange;"></i>
+                    
+                </button>
+
+                <div class="collapse navbar-collapse pt-2 pb-2 pr-2" id="navbarNav" style="background-color: black;">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/fashion">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blogs">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/outlets">Stores</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Pages
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/about">About</a>
+                                <a class="dropdown-item" href="/about/#contact">Contact</a>
+                                <a class="dropdown-item" href="/about/#faq">FAQs</a>
+                                <a class="dropdown-item" href="/about/#shipping">Shipping</a>
+                                <a class="dropdown-item" href="/about/#terms">Terms and Conditions</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pricing">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/cart"><i class="fa fa-shopping-cart" style="color:orange"></i></i></a>
+                        </li>
+                        
+                        <% if (user) { %>
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <!-- Font Awesome 4.7.0 icon -->
+                                    <i class="fa fa-user-circle-o fa-fw fa-beat-fade"></i>
+                                Profile
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/profiles">Your Profile</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="/logout">Logout</a>
+                                </div>
+                            </li>
+                           
+                          <% } else { %>
+                            <!-- Display content for non-authenticated user -->
+                            <a class="btn btn-primary signup-btn" href="/signup">Sign up</a>
+                          <% } %>
+                        
+                </div>
+            </div>
+        </nav>
+
+    </header>

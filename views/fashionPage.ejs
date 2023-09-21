@@ -1,0 +1,161 @@
+<%- include('include/_header') %>
+<%- include('include/_cover') %>
+<!-- "Go Up" button -->
+<div id="go-up-button" class="btn btn-dark" style="background-color: orange; display: none;">
+    <i class="fa fa-arrow-up" style="margin-right:1rem"></i>
+</div>
+<!-- Loader -->
+<div class="loader">
+    <div class="spinner"></div>
+    <div class="loader-text">FeetSoe...</div>
+</div>
+
+<div class="container">
+    <h1 class="my-4 text-center"><span style="color:orange">Fashion</span></h1>
+
+    <!-- Category buttons -->
+    <div class="btn-group justify-content-center">
+        <button type="button" class="btn fashion-category-btn" data-category="All">All items</button>
+        <button type="button" class="btn fashion-category-btn" data-category="Men's Wear">Men's Wear</button>
+        <button type="button" class="btn fashion-category-btn" data-category="Women's Wear">Women's Wear</button>
+        <button type="button" class="btn fashion-category-btn" data-category="Kid's Wear">Kid's Wear</button>
+    </div>
+
+    <div class="row" id="shoes-container">
+        <!-- Loop through shoe data and display cards -->
+        <% for (let i = 0; i < shoes.length; i++) { %>
+            <div class="col-md-4 mb-4 shoe-item" data-category="<%= shoes[i].category %>">
+                <div class="card fashion-card">
+                    <img src="<%= shoes[i].image %>" alt="<%= shoes[i].name %>"
+                        class="card-img-top card-img-custom">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= shoes[i].name %>
+                        </h5>
+                        <p class="card-text" style="max-height: 60px; overflow: hidden;">
+                            <%= shoes[i].excerpt %>
+                        </p>
+                        <p class="card-text"><strong>Price:</strong>
+                            <%= shoes[i].price %>
+                        </p>
+                        <!-- <p class="card-text"><strong>Description</strong>
+                            <%= shoes[i].description %>
+                        </p> -->
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="/viewProduct/<%= shoes[i].slug %>">
+                                    <button type="button" class="btn card-btn">View</button>
+                                </a>
+                                <button type="button" class="btn card-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+
+    <!-- Pagination controls -->
+    <ul class="pagination justify-content-center" id="pagination">
+        <!-- Pagination will be generated dynamically here -->
+    </ul>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const categoryButtons = document.querySelectorAll('.fashion-category-btn');
+        const shoesContainer = document.getElementById('shoes-container');
+        const allShoes = document.querySelectorAll('.shoe-item');
+        const paginationContainer = document.getElementById('pagination');
+        const itemsPerPage = 12;
+        let currentPage = 1;
+        let currentCategory = 'All'; // Initialize with 'All'
+
+        // Function to render shoes for the current page and category
+        function renderCurrentPage() {
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+
+            allShoes.forEach((shoe, index) => {
+                const category = shoe.getAttribute('data-category');
+                if ((currentCategory === 'All' || category === currentCategory) && index >= startIndex && index < endIndex) {
+                    shoe.style.display = 'block';
+                } else {
+                    shoe.style.display = 'none';
+                }
+            });
+        }
+
+        // Initialize pagination with the first page
+        renderCurrentPage();
+
+        // Function to generate pagination controls dynamically
+        function generatePaginationControls() {
+            const filteredShoes = Array.from(allShoes).filter(shoe => {
+                const category = shoe.getAttribute('data-category');
+                return currentCategory === 'All' || category === currentCategory;
+            });
+
+            const totalPages = Math.ceil(filteredShoes.length / itemsPerPage);
+            paginationContainer.innerHTML = '';
+
+            // Previous button
+            const previousButton = document.createElement('li');
+            previousButton.className = 'page-item disabled';
+            previousButton.innerHTML = '<a class="page-link" href="#" tabindex="-1">Previous</a>';
+            previousButton.addEventListener('click', () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    renderCurrentPage();
+                    generatePaginationControls();
+                }
+            });
+            paginationContainer.appendChild(previousButton);
+
+            // Page numbers
+            for (let page = 1; page <= totalPages; page++) {
+                const pageItem = document.createElement('li');
+                pageItem.className = 'page-item';
+                if (page === currentPage) {
+                    pageItem.classList.add('active');
+                }
+                pageItem.innerHTML = `<a class="page-link" href="#">${page}</a>`;
+                pageItem.addEventListener('click', () => {
+                    currentPage = page;
+                    renderCurrentPage();
+                    generatePaginationControls();
+                });
+                paginationContainer.appendChild(pageItem);
+            }
+
+            // Next button
+            const nextButton = document.createElement('li');
+            nextButton.className = 'page-item';
+            nextButton.innerHTML = '<a class="page-link" href="#">Next</a>';
+            nextButton.addEventListener('click', () => {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    renderCurrentPage();
+                    generatePaginationControls();
+                }
+            });
+            paginationContainer.appendChild(nextButton);
+        }
+
+        // Add click event listeners to the category buttons
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.getAttribute('data-category');
+                currentCategory = category; // Update the current category
+                currentPage = 1; // Reset to the first page when changing categories
+                renderCurrentPage();
+                generatePaginationControls();
+            });
+        });
+
+        // Generate initial pagination controls
+        generatePaginationControls();
+    });
+</script>
+
+<%- include('include/_footer') %>

@@ -1,0 +1,36 @@
+<%-include('include/_header')%>
+<!-- "Go Up" button -->
+<div id="go-up-button" class="btn btn-dark" style="background-color: orange; display: none;">
+    <i class="fa fa-arrow-up" style="margin-right:1rem"></i>
+</div>
+<!-- Loader -->
+<div class="loader">
+    <div class="spinner"></div>
+    <div class="loader-text">FeetSoe...</div>
+</div>
+    <div class="container" style="margin-top: 10rem;">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="profile-container text-center">
+                    <div data-aos="fade-left" class="profile-picture">
+                        <img src="https://media.giphy.com/media/Mzv5ekxTWyqDS/giphy.gif" alt="Picture">
+                    </div>
+                    <div data-aos="fade-right" class="profile-info">
+                        <h3>Welcome <%= user.username%>
+                        </h3>
+                        <p>Email: <%= user.email %>
+                        </p>
+                        <p>We welcome you <b><%= user.username%></b> to the Feetsoe. This is a website for shoe lovers. Explore
+                                a wide range of footwear and look stylish.</p>
+                        <p>Have a nice day</p>
+                    </div>
+                    <hr>
+                    <div class="profile-actions">
+                        <a href="#" class="btn btn-warning"><i class="fa fa-edit"></i> Edit Profile</a>
+                        <a href="/logout" class="btn btn-danger"><i class="fa fa-sign-out"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%-include('include/_footer')%>
