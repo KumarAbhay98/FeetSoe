@@ -29,11 +29,8 @@
 
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <!-- <link rel="stylesheet" href="css/outlet.css"> -->
-
-    <!-- <base href="http://localhost:3000/"> -->
-    <!-- AOS CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+    <!-- Include AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -86,6 +83,9 @@
                         </li>
                         
                         <% if (user) { %>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Hi!, <%= user.username%></a>
+                            </li>
                             
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -100,6 +100,7 @@
                                     <a class="dropdown-item" href="/logout">Logout</a>
                                 </div>
                             </li>
+
                            
                           <% } else { %>
                             <!-- Display content for non-authenticated user -->
