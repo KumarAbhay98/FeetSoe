@@ -1,6 +1,7 @@
 # FeetSoe E-Commerce Website
 
-![FeetSoe Logo](link_to_logo_image)
+<img width="122" alt="feetsoe logo" src="https://github.com/KumarAbhay98/FeetSoe/assets/92244303/440025b2-1e3e-4128-b97e-1bece1dab8eb">
+
 
 ## Overview
 
@@ -17,16 +18,11 @@ FeetSoe is a full-stack e-commerce website developed for footwear enthusiasts. I
 ## Installation and Usage
 
 For access and usage details, please contact the project administrator at:
-
-- Email: your.email@example.com
+- Linkedln : 
 - Website: [www.feetsoe.com](https://www.feetsoe.com)
 
 ## License
 
 This project is not open source and is subject to specific licensing terms. Unauthorized distribution and use are prohibited.
 
-## Contact
 
-For any inquiries or support related to FeetSoe, please contact:
-
-- Email: your.email@example.com
