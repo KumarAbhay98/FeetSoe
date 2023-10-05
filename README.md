@@ -5,7 +5,7 @@
 
 ## Overview
 
-FeetSoe is a full-stack e-commerce website developed for footwear enthusiasts. It offers a wide range of footwear products, a secure user authentication system, and a seamless shopping experience.
+FeetSoe is a full-stack e-commerce website developed for footwear enthusiasts. It offers a wide range of footwear products, a secure user authentication system, and a seamless shopping experience.Built using HTML, CSS, Sass, JavaScript, Express.js, EJS, JWT (JSON Web Tokens), MongoDB, Postman, and the cyclic framework, FeetSoe aims to showcase an extensive collection of footwear while ensuring a seamless user experience.
 
 ## Features
 
