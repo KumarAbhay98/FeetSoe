@@ -18,7 +18,7 @@ FeetSoe is a full-stack e-commerce website developed for footwear enthusiasts. I
 ## Installation and Usage
 
 For access and usage details, please contact the project administrator at:
-- Linkedln : 
+- Linkedln : [https://www.linkedin.com/in/abhay-kumar-6586b220a/]
 - Website: [https://aggressive-bee-zipper.cyclic.cloud/]
 
 ## License
